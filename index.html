@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="produnetcss.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth <= 768) {
+                // Redirige a la versión móvil
+                window.location.href = "mobile.html";
+            }
+        });
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'mifont';
+            src: url('fonts/museo-sans/museosans-100-webfont.woff2') format('woff2'),
+                url('fonts/museo-sans/museosans-100-webfont.woff') format('woff');
+        }
+        body {
+            background-color: #f0f0f0;
+            font-family: mifont;
+            margin: 0;
+        }
+        .navbar {
+            border-bottom: solid 3px #79c15d;
+            width: 100%;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 5%; /* Ajustado para ser relativo */
+        }
+        .navbar img {
+            height: auto;
+            max-height: 88px;
+        }
+        .right-section {
+            display: flex;
+            align-items: center;
+        }
+        .redes, .container ul.menu li a {
+            width: 400px; /* Ajuste para responsividad */
+            margin-right: 4px;
+        }
+        .container {
+            display: flex;
+            justify-content: center; /* Centrado de menú en dispositivos más pequeños */
+        }
+        .container ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que el menú se ajuste en pantallas pequeñas */
+        }
+        .container ul.menu li {
+            margin-right: 20px; /* Espaciado entre elementos del menú */
+        }
+        .container ul.menu li a {
+            font-weight: 400; /* Ajustado para visibilidad */
+            color: white;
+            text-decoration: none;
+        }
+        .green-container {
+            width: 85%;
+            height: 400px;
+            background-image: url(imgs/fondo.webp);
+            position: relative;
+            margin: 0 auto; /* Centrado automático */
+            display: flex; /* Añadido para flexibilidad */
+            justify-content: space-between; /* Espaciado entre elementos */
+        }
+        .ses-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 70%; /* Ajuste relativo para responsividad */
+        }
+        .ses-specific {
+            width: 100%; /* Ajuste para llenar el espacio */
+            height: auto;
+            max-height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .green-container, .container {
+                width: 100%;
+            }
+            .ses-image {
+                width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/sassa.png" alt="">
+        <div class="right-section">
+            <img class="redes" src="img/papa.png" alt="">
+            <img width="80px" src="imgs/lateral.png" alt="">
+        </div>
+    </div>
+
+    <div class="pol">
+        <div class="container" style="margin-left: auto; margin-right: auto;">
+            <ul class="menu">
+                <li><a>Quiénes Somos</a></li>
+                <li><a>Personas</a></li>
+                <li class="active"><a href="/pymes/">Pymes</a></li>
+                <li><a>Empresas</a></li>
+                <li class="active"><a href="/canales-de-atención/">Canales de atención</a></li>
+                <li><a>Transparencia</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background-image: url(imgs/fondo.webp);">
+        <div class="green-container">
+            <a href="save.php">
+                <img style="width: 215px;margin-left: 177px;" src="img/casaass.png" alt="">
+            </a>
+            <div class="ses-image">
+                <img class="ses-specific" src="imgs/ses.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <br><br>
+        <div>
+            <img width="65%" src="imgs/tar.png" alt="">
+        </div>
+    </center>
+</body>
+</html>
